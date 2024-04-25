@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "znajdz_chwile/wsgi.py",
+        "use": "vercel-sapper",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "znajdz_chwile/wsgi.py"
+        }
+    ]
+}
